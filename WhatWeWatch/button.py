@@ -16,6 +16,7 @@ class Button:
     def update_pos(self, x, y):
         self.rect.x = x
         self.rect.y = y
+        self.text_rect = self.text_surf.get_rect(center=self.rect.center)
 
     def get_pos(self):
         return (self.rect.x, self.rect.y)

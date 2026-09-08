@@ -11,14 +11,14 @@ class FormPopOut():
         self.button = Button(text, x, y, bw, bh, button_color_base, button_color_hover, text_color, button_font)
         self.color = popout_color
 
-        self.save_button = Button("Save", 600, 400, 100, 100, button_color_base, button_color_hover, text_color, font)
+        # self.save_button = Button("Submit", 0, 0, pw, 40, button_color_base, button_color_hover, text_color, button_font)
         self.movie_title_text_box = TextBox(0, 0, pw-10, 40, font, 'movie', text_box_active_color, text_box_inactive_color)
         self.is_seen_check_box = CheckBox(0, 0, 10, 'is_seen', text_box_inactive_color)
         self.date_text_box = TextBox(0, 0, pw-10, 40, font, 'date', text_box_active_color, text_box_inactive_color)
 
-        self.form = Form((x+(bw//2))-(pw//2), y+bh+5)
+        self.form = Form((x+(bw//2))-(pw//2), y+bh+5, pw, ph, button_color_base, button_color_hover, text_color, button_font)
         self.form.add_children([self.movie_title_text_box, self.is_seen_check_box, self.date_text_box])
-        self.form.add_submit_button(self.save_button)
+        # self.form.add_submit_button(self.save_button)
         self.active = False
 
     def toggle_popout_on(self):
